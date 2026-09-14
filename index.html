@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#111318" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Dice Throne Dice</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">COMPAGNON DE DÉS</p>
+        <h1>Dice Throne Dice</h1>
+      </div>
+      <button id="resetAllBtn" class="icon-btn" aria-label="Réinitialiser l'application">↻</button>
+    </header>
+
+    <section class="card">
+      <label class="label" for="heroSelect">Héros</label>
+      <select id="heroSelect"></select>
+      <p id="heroInfo" class="muted"></p>
+    </section>
+
+    <section class="card">
+      <div class="section-title-row">
+        <div>
+          <p class="label">Nombre de dés actifs</p>
+          <p class="muted compact">De 1 à 6 selon l'action.</p>
+        </div>
+        <div class="stepper" aria-label="Nombre de dés">
+          <button id="minusDice" class="step-btn" aria-label="Retirer un dé">−</button>
+          <div id="diceCount" class="step-value">5</div>
+          <button id="plusDice" class="step-btn" aria-label="Ajouter un dé">+</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title-row">
+        <div>
+          <h2>Tes dés</h2>
+          <p id="rollCounter" class="muted compact">Lancers : 0 / 3</p>
+        </div>
+        <button id="newActionBtn" class="secondary small-btn">Nouvelle action</button>
+      </div>
+
+      <div id="diceArea" class="dice-grid"></div>
+
+      <button id="rollBtn" class="primary big-btn">🎲 Lancer les dés</button>
+
+      <p class="muted help">
+        Touchez un dé pour le <strong>garder</strong> avant une relance.
+        Appuyez sur <strong>Modifier</strong> pour choisir manuellement sa face.
+      </p>
+    </section>
+
+    <section class="card legend-card">
+      <h2>Mode d'emploi</h2>
+      <div class="legend">
+        <div><span class="legend-dot normal"></span> Dé à relancer</div>
+        <div><span class="legend-dot held"></span> Dé conservé</div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="editDialog">
+    <form method="dialog" class="dialog-card">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">CARTE / EFFET</p>
+          <h3>Modifier la face du dé</h3>
+        </div>
+        <button value="cancel" class="dialog-close" aria-label="Fermer">×</button>
+      </div>
+      <div id="faceChoices" class="face-choices"></div>
+    </form>
+  </dialog>
+
+  <script src="heroes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
