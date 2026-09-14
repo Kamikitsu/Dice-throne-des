@@ -4,10 +4,11 @@
 // faces = contenu des faces 1 à 6.
 
 window.HEROES = {
+
   generic: {
     name: "Dés génériques",
     defaultDiceCount: 5,
-    info: "Version de test. On remplacera ensuite ces symboles par ceux de tes héros.",
+    info: "Version de test.",
     faces: [
       { value: 1, symbol: "Symbole A" },
       { value: 2, symbol: "Symbole A" },
@@ -32,17 +33,18 @@ window.HEROES = {
     ]
   },
 
-  {
-  id: "spiderman",
-  name: "Spider-Man",
-  defaultDiceCount: 5,
-  faces: [
-    { value: 1, image: "symbols/Spiderman 1.png" },
-    { value: 2, image: "symbols/Spiderman 2.png" },
-    { value: 3, image: "symbols/Spiderman 3.png" },
-    { value: 4, image: "symbols/Spiderman 4.png" },
-    { value: 5, image: "symbols/Spiderman 5.png" },
-    { value: 6, image: "symbols/Spiderman 6.png" }
-  ]
-}
+  spiderman: {
+    name: "Spider-Man",
+    defaultDiceCount: 5,
+    info: "Spider-Man",
+    faces: [
+      { value: 1, image: "symbols/Spiderman 1.png" },
+      { value: 2, image: "symbols/Spiderman 2.png" },
+      { value: 3, image: "symbols/Spiderman 3.png" },
+      { value: 4, image: "symbols/Spiderman 4.png" },
+      { value: 5, image: "symbols/Spiderman 5.png" },
+      { value: 6, image: "symbols/Spiderman 6.png" }
+    ]
+  }
+
 };
