@@ -1,4 +1,4 @@
-const CACHE_NAME = "dice-throne-dice-v1";
+const CACHE_NAME = "dice-throne-dice-v2";
 const FILES = [
   "./",
   "./index.html",

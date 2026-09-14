@@ -6,7 +6,7 @@ Fonctions incluses :
 - choix du héros ;
 - nombre de dés réglable de 1 à 6 ;
 - nombre de dés par défaut configurable selon le héros ;
-- jusqu'à 3 lancers ;
+- nombre de lancers illimité ;
 - possibilité de garder/verrouiller certains dés ;
 - relance uniquement des dés non gardés ;
 - modification manuelle d'une face de dé ;

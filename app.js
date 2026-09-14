@@ -41,7 +41,7 @@ function loadState(){
         diceCount: Math.min(6, Math.max(1, Number(parsed.diceCount) || 5)),
         dice: Array.isArray(parsed.dice) ? parsed.dice.slice(0,6) : [1,1,1,1,1,1],
         held: Array.isArray(parsed.held) ? parsed.held.slice(0,6) : [false,false,false,false,false,false],
-        rolls: Math.min(3, Math.max(0, Number(parsed.rolls) || 0))
+        rolls: Math.max(0, Number(parsed.rolls) || 0)
       };
       while(state.dice.length < 6) state.dice.push(1);
       while(state.held.length < 6) state.held.push(false);
@@ -72,8 +72,7 @@ function render(){
   heroSelect.value = state.heroId;
   heroInfo.textContent = hero.info || "";
   diceCountEl.textContent = state.diceCount;
-  rollCounter.textContent = `Lancers : ${state.rolls} / 3`;
-  rollBtn.disabled = state.rolls >= 3;
+  rollCounter.textContent = `Lancers : ${state.rolls}`;
 
   diceArea.innerHTML = "";
 
@@ -124,7 +123,6 @@ function render(){
 }
 
 function rollDice(){
-  if(state.rolls >= 3) return;
 
   for(let i = 0; i < state.diceCount; i++){
     if(!state.held[i]){
