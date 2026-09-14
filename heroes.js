@@ -30,5 +30,19 @@ window.HEROES = {
       { value: 5, symbol: "Symbole C" },
       { value: 6, symbol: "Symbole D" }
     ]
-  }
+  },
+
+  {
+  id: "spiderman",
+  name: "Spider-Man",
+  defaultDiceCount: 5,
+  faces: [
+    { value: 1, image: "symbols/Spiderman 1.png" },
+    { value: 2, image: "symbols/Spiderman 2.png" },
+    { value: 3, image: "symbols/Spiderman 3.png" },
+    { value: 4, image: "symbols/Spiderman 4.png" },
+    { value: 5, image: "symbols/Spiderman 5.png" },
+    { value: 6, image: "symbols/Spiderman 6.png" }
+  ]
+}
 };
